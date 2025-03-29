@@ -26,7 +26,7 @@ const NavHeader = () => {
     return () => {
       window.removeEventListener("hashchange", updateHash);
     };
-  }, []);
+  }, [hash]);
 
 
   useEffect(() => {

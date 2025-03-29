@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    // your custom rules here
+    "react/jsx-no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/no-unused-vars":"warn"
+  }
 }

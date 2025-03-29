@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "motion/react";
-import { once } from "node:events";
 
 const AboutSection = () => {
   const journeyData = [
@@ -31,7 +30,7 @@ const AboutSection = () => {
     >
       <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
       <section className="flex-center-col gap-10">
-        {journeyData.map((item, index) => (
+        {journeyData.map((item) => (
           <motion.div
             transition={{ duration: 0.5 }}
             initial={{ y: 200, opacity: 0 }}

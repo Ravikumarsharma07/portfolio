@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Card, CardContent } from './ui/card'
 
 const SkillsSection = () => {
   const skillCategories = [

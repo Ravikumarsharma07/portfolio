@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useTypewriter } from "react-simple-typewriter";
 const HeroSection = () => {
-  const [text, helper] = useTypewriter({
+  const [text] = useTypewriter({
     words: ["MERN Stack", "Next.js", "Frontend"],
     loop: true,
     typeSpeed: 100,
