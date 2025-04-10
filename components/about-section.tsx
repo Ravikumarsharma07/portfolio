@@ -32,9 +32,9 @@ const AboutSection = () => {
       <section className="flex-center-col gap-10">
         {journeyData.map((item) => (
           <motion.div
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, ease: "backIn" }}
             initial={{ y: 200, opacity: 0 }}
-            whileInView={{ y: [200, 100, 0], opacity: [0, 0, 1] }}
+            whileInView={{ y: [200, 50, 0], opacity: [0, 0.5, 1] }}
             viewport={{ once: true }}
             
             key={item.time}

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -58,6 +60,13 @@
   }
 }
 
+
+.bg-gradient{
+  @apply bg-gradient-to-tr from-purple-700/40 via-pink-500/10 to-blue-900/30
+}
+.bg-gradient-reverse{
+  @apply bg-gradient-to-tr from-blue-900/30 via-pink-500/10 to-purple-700/40
+}
 
 .flex-center{
   @apply flex justify-center items-center

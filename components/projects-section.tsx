@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Card, CardContent } from './ui/card'
-import { Github, Link } from 'lucide-react'
+import { Github, LinkIcon } from 'lucide-react'
+import Link from 'next/link'
 
 const ProjectsSection = () => {
   const projects = [
@@ -10,7 +11,7 @@ const ProjectsSection = () => {
       image: "/index-logo.png",
       tags: ["Next.js", "TypeScript", "Tailwind"],
       github: "https://github.com/Ravikumarsharma07/index-elevators",
-      demo: "https://index-elevators.vercel.app/"
+      demo: "https://indexelevators.in/"
     },
     {
       title: "Xlsx To Json Converter",
@@ -23,32 +24,32 @@ const ProjectsSection = () => {
     {
       title: "Portfolio Website",
       description: "Modern portfolio with dark mode and animations",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      image: "/portfolio-ravi.png",
       tags: ["Next.js", "TypeScript", "Tailwind"],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/Ravikumarsharma07/portfolio",
+      demo: "https://ravi-kr-sharma.vercel.app/"
     }
   ]
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-purple-700/40 via-pink-500/10 to-blue-900/30">
-      <div className="container px-4 mx-auto">
+      <div className="container px-6 md:px-4 mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {projects.map((project, index) => (
-            <Card key={index} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
+            <Card key={index} className="group bg-gradient-to-br from-blue-900/50  via-pink-500/20 to-purple-700/40 overflow-hidden hover:shadow-lg transition-all duration-300">
               <CardContent className="p-0">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-44 sm:h-48 overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="object-cover group-hover:scale-110 opacity-70 group-hover:opacity-90 transition-all duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                <div className="p-4">
+                  <h3 className="text-[17px] sm:text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-[14px] sm:text-[16px] text-muted-foreground mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, i) => (
                       <span key={i} className="text-xs px-2 py-1 bg-primary/10 rounded">
@@ -57,12 +58,12 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <a href={project.github} className="text-muted-foreground hover:text-primary transition-colors">
+                    <Link target='_blank' href={project.github} className="text-muted-foreground hover:text-primary transition-colors">
                       <Github className="h-5 w-5" />
-                    </a>
-                    <a href={project.demo} className="text-muted-foreground hover:text-primary transition-colors">
-                      <Link className="h-5 w-5" />
-                    </a>
+                    </Link>
+                    <Link target='_blank' href={project.demo} className="text-muted-foreground hover:text-primary transition-colors">
+                      <LinkIcon className="h-5 w-5" />
+                    </Link>
                   </div>
                 </div>
               </CardContent>
