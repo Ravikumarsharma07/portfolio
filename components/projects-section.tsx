@@ -14,6 +14,14 @@ const ProjectsSection = () => {
       demo: "https://indexelevators.in/"
     },
     {
+      title:"PillUp Clone",
+      description:"Medication services landing page",
+      image:"pillup-clone.png",
+      tags:["React.js", "Tailwind", "Framer Motion"],
+      github:"https://github.com/Ravikumarsharma07/PillUp-Clone",
+      demo:"https://pill-up-clone.vercel.app/"
+    },
+    {
       title: "Xlsx To Json Converter",
       description: "A simple app to convert xlsx to json",
       image: "/xlsx.png",
