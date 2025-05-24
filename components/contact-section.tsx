@@ -40,6 +40,7 @@ const ContactSection = () => {
           variant: "default"
         });
       }else{
+        console.log(response);
         toast({
           title: "Error occured",
           description: "Message not sent",
