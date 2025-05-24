@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-[100dvh] flex items-center justify-center bg-gradient-to-br from-purple-700/40 via-pink-500/10 to-blue-900/30 pt-16"
+      className="min-h-[100vh] flex items-center justify-center bg-gradient-to-br from-purple-700/40 via-pink-500/10 to-blue-900/30 pt-16"
     >
       <div className="container px-4 mx-auto text-center pb-10 flex flex-col items-center">
         <Image
