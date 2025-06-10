@@ -28,15 +28,16 @@ const AboutSection = () => {
       id="about"
       className="flex-center-col py-20 padding-x bg-gradient-to-tr from-purple-700/40 via-pink-500/10 to-blue-900/30 "
     >
-      <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
+      <h2 className="text-3xl tracking-wide bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold mb-12 text-center">
+        About Me
+      </h2>
       <section className="flex-center-col gap-10">
         {journeyData.map((item) => (
           <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "linear" }}
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: [140, 70, 0], opacity: [0, 0.5, 1] }}
             viewport={{ once: true }}
-            
             key={item.time}
             className="flex-center gap-4 md:gap-10 h-max max-sm:px-2"
           >
@@ -44,13 +45,25 @@ const AboutSection = () => {
               {" "}
             </div>
             <div className="h-max w-full shadow-xl dark:shadow-[#13112c] shadow-[#9590d4] font-sans p-2 sm:p-5 border border-[beige] rounded-2xl bg-gradient-to-tr from-blue-900/30 via-pink-500/10  to-purple-700/40">
-              <h3 className="flex items-center gap-2 font-bold text-[16px] md:text-[18px] font-mono pb-1 dark:text-white/70 text-secondary-foreground/80">
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "linear", delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-2 font-bold text-[16px] md:text-[18px] font-mono pb-1 dark:text-white/70 text-secondary-foreground/80"
+              >
                 <div className="h-2 w-2 rounded-full bg-purple-500"></div>
                 {item.time} <span className="font-normal">{item.title}</span>
-              </h3>
-              <p className="text-[14px] md:text-[16px] leading-6 pl-4 dark:text-white/60 text-secondary-foreground/70">
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "linear", delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-[14px] md:text-[16px] leading-6 pl-4 dark:text-white/60 text-secondary-foreground/70"
+              >
                 {item.description}
-              </p>
+              </motion.p>
             </div>
           </motion.div>
         ))}

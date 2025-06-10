@@ -48,7 +48,12 @@ const SkillsSection = () => {
       id="skills"
       className="py-20 padding-x bg-gradient-to-br from-purple-700/40 via-pink-500/10 to-blue-900/30"
     >
-      <h2 className="text-3xl font-bold mb-12 text-center">My Skills</h2>
+      <div className="flex-center">
+
+      <h2 className="w-max text-3xl tracking-wide bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold mb-12">
+        My Skills 
+      </h2>
+      </div>
 
       <section className="grid grid-cols-1 md:grid-cols-3 md:gap-8 lg:gap-12">
         {skillCategories.map((category, index) => (
@@ -70,9 +75,9 @@ const SkillsSection = () => {
                 <div className="h-2 w-2 bg-gray-500 dark:bg-emerald-600 rounded-full"></div>
                 <motion.div
                   key={skill.name}
-                  transition={{ duration: 0.8, delay: skillIndex * 0.3 }}
+                  transition={{ duration: 0.6, delay: skillIndex * 0.3 }}
                   initial={{ x: -70, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: [0, 0, 1] }}
+                  whileInView={{ x: 0, opacity: 1}}
                   viewport={{ once: true }}
                   className="w-max border-blue-600 shadow-[0_0_4px] hover:shadow-[0_0_5px] shadow-purple-400 rounded-xl bg-gradient-reverse"
                 >
