@@ -49,7 +49,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-tr from-purple-700/40 via-pink-500/10 to-blue-900/30 py-20 px-4">
+    <section id="experience" className="min-h-screen bg-gradient-to-tr from-purple-700/40 via-pink-500/10 to-blue-900/30 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -116,7 +116,7 @@ const ExperienceSection = () => {
 
               {/* Project Details */}
               <div className="w-full lg:w-1/2 space-y-6">
-                <div className="flex items-center text-purple-400 text-sm font-medium">
+                <div className="flex items-center text-purple-500 dark:text-purple-300 text-sm font-medium">
                   <Calendar className="w-4 h-4 mr-2" />
                   {project.period}
                 </div>
@@ -126,11 +126,11 @@ const ExperienceSection = () => {
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 viewport={{once:true}}
-                className="text-2xl md:text-3xl font-bold text-white">
+                className="text-2xl md:text-3xl font-bold dark:text-white">
                   {project.title}
                 </motion.h3>
               <Link target="_blank" href={`http://${project.company}`} >
-                <p className="text-lg mt-4 text-purple-300 font-medium">
+                <p className="text-lg mt-4 text-purple-500 dark:text-purple-300 font-medium">
                   {project.company}
                 </p>
               </Link>
@@ -140,7 +140,7 @@ const ExperienceSection = () => {
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 viewport={{once:true}}
-                className="text-gray-300 leading-relaxed text-[15px] md:text-lg">
+                className="text-muted-foreground leading-relaxed text-[15px] md:text-lg">
                   {project.description}
                 </motion.p>
 
@@ -149,7 +149,7 @@ const ExperienceSection = () => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="w-max px-2 py-1 text-sm border-blue-600 shadow-[0_0_3px] hover:shadow-[0_0_5px] shadow-purple-400 rounded-xl bg-gradient-reverse"
+                      className="w-max px-2 py-1 text-sm  border-blue-600 shadow-[0_0_3px] hover:shadow-[0_0_5px] shadow-purple-400 rounded-xl bg-gradient-reverse"
                     >
                       {tech}
                     </span>
@@ -158,7 +158,7 @@ const ExperienceSection = () => {
 
                 {/* Highlights */}
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold text-lg">
+                  <h4 className="dark:text-white font-semibold text-lg">
                     Key Achievements:
                   </h4>
                   <ul className="space-y-2">
@@ -169,7 +169,7 @@ const ExperienceSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{duration: 0.6, delay: idx * 0.1 }}
-                        className="flex items-center text-gray-300 text-[15px] md:text-lg"
+                        className="flex items-center text-muted-foreground text-[15px] md:text-lg"
                       >
                         <div
                           className={`w-2 h-2 bg-purple-400 rounded-full mr-3 flex-shrink-0`}

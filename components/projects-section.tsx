@@ -60,7 +60,7 @@ const ProjectsSection = () => {
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[74rem] mx-auto">
           <div className="relative">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
@@ -69,13 +69,13 @@ const ProjectsSection = () => {
               <div className="flex gap-2">
                 <button
                   onClick={prevFeatured}
-                  className="p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+                  className="p-2 dark:bg-white/10 bg-black/40 hover:bg-black/60 dark:hover:bg-white/20 rounded-full text-white transition-colors"
                 >
                   <ChevronLeft size={20} />
                 </button>
                 <button
                   onClick={nextFeatured}
-                  className="p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+                  className="p-2 dark:bg-white/10 bg-black/40 hover:bg-black/60 dark:hover:bg-white/20 rounded-full text-white transition-colors"
                 >
                   <ChevronRight size={20} />
                 </button>
@@ -87,19 +87,19 @@ const ProjectsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-             className="grid md:grid-cols-2 gap-2 md:gap-8 items-center md:ml-0 lg:ml-20">
-              <div className="hover:scale-[1.04] transition-all duration-300">
+             className="w-full grid md:grid-cols-2 gap-2 md:gap-8 items-center  lg:ml-10">
+              <div className="w-full hover:scale-[1.04] transition-all duration-300 overflow-hidden rounded-2xl">
                 <Image
                   height={100}
                   width={100}
                   src={projects[featuredIndex].image}
                   alt={projects[featuredIndex].title}
-                  className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-64 md:h-96 object-cover hover:scale-110 shadow-2xl transition-all duration-300"
                 />
               </div>
               <div className="space-y-6">
                 <div>
-                  <span className="max-md:absolute top-[63%] right-2 px-3 py-1 bg-purple-500/30 text-purple-300 rounded-full text-sm font-medium">
+                  <span className="max-md:absolute top-[63%] right-2 px-3 py-1 bg-purple-500/30 text-purple-800 dark:text-purple-300 rounded-full text-sm font-medium">
                     {projects[featuredIndex].category}
                   </span>
                 </div>
@@ -108,7 +108,7 @@ const ProjectsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="text-2xl md:text-4xl font-bold text-white"
+                  className="text-2xl md:text-4xl font-bold dark:text-white"
                 >
                   {projects[featuredIndex].title}
                 </motion.h2>
@@ -117,7 +117,7 @@ const ProjectsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                   viewport={{ once: true }}
-                  className="text-gray-300 text-[16px] md:text-lg leading-relaxed"
+                  className="text-muted-foreground text-[16px] md:text-lg leading-relaxed"
                 >
                   {projects[featuredIndex].description}
                 </motion.p>
@@ -146,7 +146,7 @@ const ProjectsSection = () => {
                 className="flex gap-4 pt-2">
                   <a
                     href={projects[featuredIndex].github}
-                    className="flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-white dark:bg-white/20 dark:hover:bg-white/40 hover:bg-white/40 rounded-lg dark:text-white transition-colors"
                   >
                     <Github size={18} />
                     View Code
