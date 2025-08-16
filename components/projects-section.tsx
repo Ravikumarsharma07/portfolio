@@ -6,6 +6,15 @@ import { useState } from "react";
 
 const projects = [
   {
+    title: "HealMeal-AI",
+    description: "AI-powered hospital food management system",
+    image: "/healmeal-ai.png",
+    tags: ["Next.js", "Tailwind", "Node.js", "Express", "MongoDB", "OpenAI API", "JWT"],
+    github: "https://github.com/Ravikumarsharma07/HealMeal-AI",
+    demo: "https://heal-meal-ai.vercel.app/",
+    category: "Full Stack App",
+  },
+  {
     title: "PillUp Clone",
     description: "Medication services landing page",
     image: "pillup-clone.png",
