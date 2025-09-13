@@ -6,24 +6,42 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ExperienceSection = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "Index Elevators Landing Page",
-      company: "indexelevators.in",
-      period: "2025",
-      description:
-        "Designed and developed a modern, responsive landing page for a lifting and hoisting services company. Implemented a dynamic service catalog with product showcases, and lead generation forms.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-      highlights: [
-        "Mobile-first responsive design",
-        "SEO optimized for industrial keywords",
-        "Interactive product catalog",
-      ],
-      color: "from-purple-600/30 to-pink-600/20",
-      image: "/index-logo.png",
-    },
-  ];
+const projects = [
+ {
+    id: 2,
+    title: "Jyoti Ambulance Service Landing Page",
+    company: "jyotiambulance.in",
+    period: "2025",
+    description:
+      "Built a highly responsive landing page for Jyoti Ambulance Service, focusing on providing easy access to emergency medical services. Implemented city-specific service pages and quick contact options.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SSG"],
+    highlights: [
+      "SSG for fast page loads and SEO benefits",
+      "Optimized for mobile and desktop use",
+      "Quick 'Call Now' button for immediate service access",
+    ],
+    color: "from-red-600/30 to-yellow-600/20",
+    image: "/jyoti-ambulance.png",
+  },
+  {
+    id: 1,
+    title: "Index Elevators Landing Page",
+    company: "indexelevators.in",
+    period: "2025",
+    description:
+      "Designed and developed a modern, responsive landing page for a lifting and hoisting services company. Implemented a dynamic service catalog with product showcases, and lead generation forms.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    highlights: [
+      "Mobile-first responsive design",
+      "SEO optimized for industrial keywords",
+      "Interactive product catalog",
+    ],
+    color: "from-purple-600/30 to-pink-600/20",
+    image: "/index-logo.png",
+  },
+  
+];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
